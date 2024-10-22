@@ -89,4 +89,16 @@ app.post('/describe', async (c) => {
   return c.json({ result: response });
 });
 
+app.post('/agree', async (c) => {
+  await c.env.AI.run(
+    // @ts-ignore
+    '@cf/meta/llama-3.2-11b-vision-instruct',
+    {
+      prompt: 'agree',
+    }
+  );
+
+  return c.json({ result: 'success' });
+});
+
 export default app;
