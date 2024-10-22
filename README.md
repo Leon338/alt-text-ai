@@ -49,13 +49,13 @@ You can either send a JSON request with an image URL or upload the image directl
 
 - **Request with Image URL (JSON)**:
    ```bash
-   curl -X POST https://your-worker-url/describe \
+   curl -X POST https://your-worker-url/describe?lang=en \
    -H "Content-Type: application/json" \
    -d '{"url": "https://www.gstatic.com/webp/gallery/4.sm.jpg"}'
    ```
 - **Direct Image Upload (Binary)**:
    ```bash
-   curl -X POST https://your-worker-url/describe \
+   curl -X POST https://your-worker-url/describe?lang=en \
   -H "Content-Type: image/jpeg" \
   --data-binary @path/to/image.jpg
    ```
