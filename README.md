@@ -57,6 +57,6 @@ You can either send a JSON request with an image URL or upload the image directl
    ```bash
    curl -X POST https://your-worker-url/describe?lang=en \
   -H "Content-Type: image/jpeg" \
-  --data-binary @path/to/image.jpg
+  -d "@path/to/image.jpg"
    ```
    
